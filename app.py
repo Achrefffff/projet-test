@@ -1,2 +1,3 @@
 #!/usr/bin/env python3
-print("Mon premier script DevOps fonctionne !")
+print("test1")
+print("test2")
