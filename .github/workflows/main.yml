@@ -1,0 +1,21 @@
+name: Mon Robot DevOps CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  un-test-rapide:
+    runs-on: ubuntu-latest 
+
+    steps:
+      - name: Récupérer le code du projet
+        uses: actions/checkout@v4
+
+      - name: Configurer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Exécuter le script pour vérifier qu'il fonctionne
+        run: python3 app.py
